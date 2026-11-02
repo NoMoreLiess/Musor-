@@ -1,4 +1,4 @@
-// Сборка двух сайтов: node build/build.mjs
+// Сборка всех сайтов: node build/build.mjs
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -14,18 +14,29 @@ const SPY = C.SPY;
 
 const SITES = [
   {
-    id: 'v1', out: 'site-1', online: 2293, color: '#0E0E14', T: { ...T1, blog: T1.blog || C.BLOG },
+    id: 'v1', out: 'site-11', online: 2293, color: '#0E0E14', T: { ...T1, blog: T1.blog || C.BLOG },
     vars: { bg: '#0E0E14', 'bg-rgb': '14,14,20', bg2: '#14131C', card: '#1A1924', 'card-h': '#22202E', line: 'rgba(255,255,255,.07)', line2: 'rgba(255,255,255,.12)', acc: '#8B6CFF', 'acc-h': '#B09CFF', 'acc-d': '#6247D9', 'acc-m': 'rgba(139,108,255,.14)', 'acc-b': 'rgba(139,108,255,.38)', 'acc-rgb': '139,108,255', text: '#F3F1FA', muted: '#BDB8CC', dim: '#86819A', ease: 'cubic-bezier(.22,1,.36,1)' },
     heroCase: ['case20', 'Premium · ~$3'], heroDrop: ['asiimov', 'AWP · ~$28'], chance: 52,
+    noFeed: true, skins: 'skins', // ленты дропа на копиях 11–12 нет
   },
   {
-    id: 'v2', out: 'site-2', online: 2417, color: '#110D13', T: T2,
+    id: 'v2', out: 'site-12', online: 2417, color: '#110D13', T: T2,
     vars: { bg: '#110D13', 'bg-rgb': '17,13,19', bg2: '#17111A', card: '#1E1822', 'card-h': '#271F2C', line: 'rgba(255,255,255,.07)', line2: 'rgba(255,255,255,.12)', acc: '#B35CF2', 'acc-h': '#CF92F8', 'acc-d': '#8A3BC8', 'acc-m': 'rgba(179,92,242,.14)', 'acc-b': 'rgba(179,92,242,.38)', 'acc-rgb': '179,92,242', text: '#F8F1FA', muted: '#C6B8CC', dim: '#8C8195', ease: 'cubic-bezier(.22,1,.36,1)' },
-    heroCase: ['case17', 'Premium · ~$3'], heroDrop: ['hyperbeast', 'AWP · ~$28'], chance: 52,
+    heroCase: ['metal03', 'Premium · ~$3'], heroCaseDir: 'cases2', heroDrop: ['awp-manowar', 'AWP · ~$28'], chance: 52,
+    noFeed: true, // ленты дропа на копиях 11–12 нет
+    // свой набор скинов (футер, hero) — не пересекается с сайтом 1
+    skins: 'skins2', drops: JSON.parse(fs.readFileSync(path.join(ROOT, '_shared/skins2/drops.json'), 'utf8')).map(([k, n, r]) => [k, n, r]),
+    footSkins: ['bowie-fade', 'gut-doppler', 'hydra-emerald', 'daggers-fade', 'm4a4-asiimov'],
   },
   V3.site,
   V4.site,
 ];
+// остальные сайты — build/sites/vN.mjs (v5, v6, v8 убраны в build/archive/).
+// Номера папок: v1→site-11, v2→site-12, v11–v13→site-13–15 (копии), v3→site-16, v4→site-17, v7→site-18, v9→site-19, v10→site-20
+for (let n = 5; n <= 13; n++) {
+  const f = path.join(path.dirname(fileURLToPath(import.meta.url)), `sites/v${n}.mjs`);
+  if (fs.existsSync(f)) SITES.push((await import(`./sites/v${n}.mjs`)).site);
+}
 
 // ---------- Общие куски ----------
 const ext = (cls, inner, extra = '') => `<a class="${cls}" href="${SPY}" rel="nofollow"${extra}>${inner}</a>`;
@@ -48,7 +59,7 @@ function header(s, cur) {
 }
 
 function feed(s) {
-  let list = [...C.DROPS];
+  let list = [...(s.drops || C.DROPS)]; // у сайтов 11–13 своя лента из своих скинов
   if (s.id === 'v2') list = [...list.slice(7), ...list.slice(0, 7)].reverse();
   if (s.feedOrder) list = s.feedOrder(list);
   const cards = list.map(([k, n, r]) => `<a class="drop" data-r="${r}" href="${SPY}" rel="nofollow" title="${n}"><img src="/assets/skins/${k}.webp" alt="" width="84" height="48"><span>${n}</span></a>`).join('');
@@ -74,7 +85,7 @@ function footer(s) {
 <div class="footer1__bottom"><span>© 2026 мусор дроп · Musor Drop. Все права защищены.</span><a href="mailto:${C.EMAIL}">${C.EMAIL}</a></div>
 </div></footer>`;
   }
-  const imgs = ['doppler', 'dragonlore', 'pandora', 'howl', 'fade'].map(k => `<img src="/assets/skins/${k}.webp" alt="">`).join('');
+  const imgs = (s.footSkins || ['doppler', 'dragonlore', 'pandora', 'howl', 'fade']).map(k => `<img src="/assets/skins/${k}.webp" alt="">`).join('');
   return `<footer class="footer2"><div class="container">
 <div class="footer2__cta"><div class="imgs">${imgs}</div><h2>${U.footerCtaTitle}</h2><p>${U.footerCtaText}</p>${steamBtn('btn btn--primary')}</div>
 <div class="footer2__row">${logo()}<nav class="footer2__links" aria-label="Разделы">${C.SECTIONS.map(([h, t]) => `<a href="${h}">${t}</a>`).join('')}</nav><a class="footer2__top" href="#top" aria-label="Наверх">${I.top}</a></div>
@@ -104,7 +115,7 @@ function layout(s, { path: p, meta, body, ld }) {
 <body class="${s.id}" id="top">
 <a class="skip" href="#main">Перейти к содержимому</a>
 ${header(s, p)}
-${feed(s)}
+${s.noFeed ? '' : feed(s)}
 <main id="main">
 ${body}
 </main>
@@ -171,7 +182,7 @@ function home(s) {
   const T = s.T, h = T.hero;
   const vpn = `<div class="vpn"><span class="vpn__ico">${I.shield}</span><span class="vpn__badge">ДЛЯ РФ</span><span>${T.vpn}</span></div>`;
   const checks = `<ul class="checks">${h.checks.map(c => `<li>${I.check}${c}</li>`).join('')}</ul>`;
-  const slotCase = `<div class="slot"><div class="slot__label">Кейс</div><div class="slot__img"><img src="/assets/cases/${s.heroCase[0]}.webp" alt="Кейс CS2"></div><div class="slot__cap">${s.heroCase[1]}</div></div>`;
+  const slotCase = `<div class="slot"><div class="slot__label">Кейс</div><div class="slot__img"><img src="/assets/${s.heroCaseDir || 'cases'}/${s.heroCase[0]}.webp" alt="Кейс CS2"></div><div class="slot__cap">${s.heroCase[1]}</div></div>`;
   const slotDrop = cls => `<div class="slot ${cls}"><div class="slot__label">Дроп</div><div class="slot__img"><img src="/assets/skins/${s.heroDrop[0]}.webp" alt="Выпавший скин AWP"></div><div class="slot__cap">${s.heroDrop[1]}</div></div>`;
   const chips = `<span class="chip chip--acc">RNG ✓</span><span class="chip">Live исход</span><span class="chip">Steam Trade</span>`;
   const A = T.about;
@@ -395,9 +406,12 @@ for (const s of SITES) {
   const out = path.join(ROOT, s.out);
   fs.rmSync(out, { recursive: true, force: true });
   const A = path.join(out, 'assets');
-  copyDir(path.join(ROOT, '_shared/skins'), path.join(A, 'skins'), f => f.endsWith('.webp'));
-  const used = new Set(C.CASES.map(c => c[0] + '.webp').concat(SITES.map(x => x.heroCase[0] + '.webp')));
-  if (!s.render) copyDir(path.join(ROOT, '_shared/cases_web'), path.join(A, 'cases'), f => used.has(f));
+  fs.mkdirSync(A, { recursive: true });
+  // скины: сайты 1–2 — общий набор для ленты; сайты 3–10 — только свой набор (или никакого)
+  const skinDir = s.skins ? `_shared/${s.skins}` : s.noFeed ? null : '_shared/skins';
+  if (skinDir) copyDir(path.join(ROOT, skinDir), path.join(A, 'skins'), f => f.endsWith('.webp'));
+  const used = new Set(C.CASES.map(c => c[0] + '.webp').concat(s.heroCase[0] + '.webp'));
+  if (!s.render && s.id === 'v1') copyDir(path.join(ROOT, '_shared/cases_web'), path.join(A, 'cases'), f => used.has(f));
   if (s.id === 'v2') copyDir(path.join(ROOT, '_shared/cases2'), path.join(A, 'cases2'), f => f.endsWith('.webp'));
   fs.copyFileSync(path.join(ROOT, '_shared/logo_t.svg'), path.join(A, 'logo.svg'));
   fs.copyFileSync(path.join(ROOT, 'build/main.js'), path.join(A, 'main.js'));

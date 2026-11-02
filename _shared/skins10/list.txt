@@ -1,0 +1,8 @@
+ak-headshot|AK-47 | Head Shot
+awp-chromatic|AWP | Chromatic Aberration
+m4a4-temukau|M4A4 | Temukau
+deagle-mecha|Desert Eagle | Mecha Industries
+usp-printstream|USP-S | Printstream
+glock-gamma|Glock-18 | Gamma Doppler
+m9-lore|★ M9 Bayonet | Lore
+famas-commemoration|FAMAS | Commemoration

@@ -37,3 +37,11 @@ export const collBySlug = Object.fromEntries(COLLS.map(c => [c.slug, c]));
 
 export const rub = v => v.toLocaleString('ru-RU', { maximumFractionDigits: 2 }).replace(/[\s ]/g, ' ') + ' ₽';
 export const coin = v => v.toLocaleString('en-US', { maximumFractionDigits: 2 });
+
+// Свой набор коллекций для каждого сайта-каталога (наборы не пересекаются):
+// site-16 (v3) — Мусорная, Оружие, Культ Моды; site-18 (v7) — Мусорный минимум, VIP Color.
+// (в архиве: v5 — 50/50, StatTrak, Металл; v6 — Кейсы из CS2, Mystery Box, Ножи)
+export function pick(slugs) {
+  const colls = COLLS.filter(c => slugs.includes(c.slug));
+  return { COLLS: colls, ALL: colls.flatMap(c => c.items), collBySlug: Object.fromEntries(colls.map(c => [c.slug, c])) };
+}

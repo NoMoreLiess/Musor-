@@ -1,0 +1,13 @@
+ak-asiimov|AK-47 | Asiimov
+awp-containment|AWP | Containment Breach
+m4a4-neonoir|M4A4 | Neo-Noir
+m4a1-goldencoil|M4A1-S | Golden Coil
+glock-vogue|Glock-18 | Vogue
+usp-neonoir|USP-S | Neo-Noir
+deagle-ocean|Desert Eagle | Ocean Drive
+talon-slaughter|★ Talon Knife | Slaughter
+gloves-omega|★ Sport Gloves | Omega
+ssg-dragonfire|SSG 08 | Dragonfire
+mac10-neonrider|MAC-10 | Neon Rider
+p90-asiimov|P90 | Asiimov
+aug-akihabara|AUG | Akihabara Accept

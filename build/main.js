@@ -94,4 +94,54 @@
       });
     });
   });
+  // Фильтр строк таблицы по кнопкам data-band (сайт 5) и data-pick (сайт 7)
+  document.querySelectorAll('[data-filter-for]').forEach(function (bar) {
+    var target = document.querySelector(bar.getAttribute('data-filter-for'));
+    var attr = bar.getAttribute('data-filter-attr');
+    var btns = bar.querySelectorAll('button[' + attr + ']');
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var v = btn.getAttribute(attr);
+        btns.forEach(function (b) { b.classList.toggle('is-on', b === btn); });
+        target.querySelectorAll('[' + attr + ']').forEach(function (el) { el.hidden = !(v === 'all' || el.getAttribute(attr) === v); });
+      });
+    });
+  });
+  // Калькулятор бюджета (сайт 7): какие кейсы укладываются в сумму и сколько раз
+  document.querySelectorAll('[data-calc]').forEach(function (box) {
+    var list = JSON.parse(box.querySelector('[data-cases]').textContent);
+    var input = box.querySelector('input[type=number]'), bonus = box.querySelector('[data-bonus]');
+    var out = box.querySelector('[data-list]'), cnt = box.querySelector('[data-count]'), tot = box.querySelector('[data-total]');
+    var fmt = function (v) { return v.toLocaleString('ru-RU', { maximumFractionDigits: 2 }) + ' ₽'; };
+    var times = function (n) { var m = n % 100, k = n % 10; return n + (m > 10 && m < 20 ? ' раз' : k > 1 && k < 5 ? ' раза' : ' раз'); };
+    var render = function () {
+      var sum = Math.max(0, parseFloat(input.value) || 0);
+      if (bonus.checked) sum = Math.round(sum * 1.07);
+      var fit = list.filter(function (c) { return c[1] <= sum; });
+      cnt.textContent = fit.length;
+      tot.textContent = 'из ' + list.length + (bonus.checked ? ' · с бонусом на балансе ' + fmt(sum) : '');
+      out.innerHTML = fit.length ? fit.slice(-8).reverse().map(function (c) {
+        return '<li><img src="/assets/cases/' + c[2] + '.webp" alt="" width="44" height="44"><span>' + c[0] + '</span><b>' + fmt(c[1]) + '</b><small>' + times(Math.floor(sum / c[1])) + '</small></li>';
+      }).join('') : '<li class="is-empty">Самый дешёвый кейс стоит 19 ₽ — увеличьте сумму.</li>';
+    };
+    input.addEventListener('input', render);
+    bonus.addEventListener('change', render);
+    box.querySelectorAll('[data-sum]').forEach(function (b) { b.addEventListener('click', function () { input.value = b.getAttribute('data-sum'); render(); }); });
+    render();
+  });
+  // Поиск по вопросам справочного центра (сайт 10)
+  document.querySelectorAll('[data-search]').forEach(function (box) {
+    var input = box.querySelector('input'), list = box.querySelector('ul');
+    var items = list.querySelectorAll('a[data-text]'), none = list.querySelector('.srch10__none');
+    input.addEventListener('input', function () {
+      var words = input.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+      list.hidden = !words.length;
+      var shown = 0;
+      items.forEach(function (a) {
+        var ok = words.every(function (w) { return a.getAttribute('data-text').indexOf(w.slice(0, Math.max(3, w.length - 2))) > -1; });
+        a.parentNode.hidden = !ok; if (ok) shown++;
+      });
+      none.hidden = shown > 0;
+    });
+  });
 })();
