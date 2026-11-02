@@ -1,4 +1,6 @@
 (function () {
+  // папка assets берётся от адреса самого скрипта — так пути верны и на домене, и в превью (/Musor-/site-NN/)
+  var ASSETS = ((document.currentScript && document.currentScript.src) || '/assets/main.js').replace(/main\.js[^/]*$/, '');
   // Мобильное меню
   var burger = document.querySelector('.burger');
   var mnav = document.querySelector('.mnav');
@@ -121,7 +123,7 @@
       cnt.textContent = fit.length;
       tot.textContent = 'из ' + list.length + (bonus.checked ? ' · с бонусом на балансе ' + fmt(sum) : '');
       out.innerHTML = fit.length ? fit.slice(-8).reverse().map(function (c) {
-        return '<li><img src="/assets/cases/' + c[2] + '.webp" alt="" width="44" height="44"><span>' + c[0] + '</span><b>' + fmt(c[1]) + '</b><small>' + times(Math.floor(sum / c[1])) + '</small></li>';
+        return '<li><img src="' + ASSETS + 'cases/' + c[2] + '.webp" alt="" width="44" height="44"><span>' + c[0] + '</span><b>' + fmt(c[1]) + '</b><small>' + times(Math.floor(sum / c[1])) + '</small></li>';
       }).join('') : '<li class="is-empty">Самый дешёвый кейс стоит 19 ₽ — увеличьте сумму.</li>';
     };
     input.addEventListener('input', render);
