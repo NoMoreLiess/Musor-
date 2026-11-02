@@ -30,3 +30,7 @@ python -m http.server 8104 -d site-4
 node build/build.mjs          # все сайты
 node build/build.mjs site-3   # один сайт
 ```
+
+## Превью по ссылке (GitHub Pages)
+
+https://nomoreliess.github.io/Musor-/ — ветка `gh-pages`, собирается командой `node build/preview.mjs /Musor- <папка>` (корневые ссылки получают префикс `/Musor-/site-N`, на страницах `noindex`).
