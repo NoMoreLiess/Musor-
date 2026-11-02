@@ -1,0 +1,868 @@
+[
+{
+"slug": "kult-mody",
+"title": "Культ Моды",
+"items": [
+{
+"id": "113",
+"key": "vetements",
+"name": "VETEMENTS",
+"img": "/assets/img/cases/vetements.webp",
+"coin": "4.44",
+"rub": "400"
+},
+{
+"id": "112",
+"key": "maison-margiela",
+"name": "MAISON MARGIELA",
+"img": "/assets/img/cases/maison-margiela.webp",
+"coin": "23.45",
+"rub": "1 999.99"
+},
+{
+"id": "111",
+"key": "rick-owens",
+"name": "RICK OWENS",
+"img": "/assets/img/cases/rick-owens.webp",
+"coin": "55.55",
+"rub": "4 967.67"
+},
+{
+"id": "114",
+"key": "louis-vuitton",
+"name": "Louis Vuitton",
+"img": "/assets/img/cases/louis-vuitton.webp",
+"coin": "97.67",
+"rub": "8 696.90"
+},
+{
+"id": "110",
+"key": "napapijri-anoraki",
+"name": "NAPAPIJRI ANORAKI",
+"img": "/assets/img/cases/napapijri-anoraki.webp",
+"coin": "111.11",
+"rub": "10 000"
+},
+{
+"id": "108",
+"key": "collaborations",
+"name": "COLLABORATIONS",
+"img": "/assets/img/cases/collaborations.webp",
+"coin": "194.34",
+"rub": "17 500"
+},
+{
+"id": "109",
+"key": "balenciaga",
+"name": "BALENCIAGA",
+"img": "/assets/img/cases/balenciaga.webp",
+"coin": "444.44",
+"rub": "40 000"
+}
+]
+},
+{
+"slug": "mystery-box",
+"title": "Mystery Box",
+"items": [
+{
+"id": "92",
+"key": "sluchajnyj-kod-krasnyj",
+"name": "Случайный Код красный",
+"img": "/assets/img/cases/sluchajnyj-kod-krasnyj.webp",
+"coin": "75",
+"rub": "6 767"
+},
+{
+"id": "93",
+"key": "hudshij-ili-luchshij",
+"name": "Худший или Лучший",
+"img": "/assets/img/cases/hudshij-ili-luchshij.webp",
+"coin": "111",
+"rub": "10 011"
+},
+{
+"id": "89",
+"key": "sluchajnyj-potok-informacii",
+"name": "Случайный Поток информации",
+"img": "/assets/img/cases/sluchajnyj-potok-informacii.webp",
+"coin": "333",
+"rub": "29 967"
+},
+{
+"id": "91",
+"key": "sluchajnyj-udar-molnii",
+"name": "Случайный Удар Молнии",
+"img": "/assets/img/cases/sluchajnyj-udar-molnii.webp",
+"coin": "701",
+"rub": "63 267"
+},
+{
+"id": "90",
+"key": "sluchajnye-volny",
+"name": "Случайные Волны",
+"img": "/assets/img/cases/sluchajnye-volny.webp",
+"coin": "755",
+"rub": "67 951"
+}
+]
+},
+{
+"slug": "metallicheskaya-kollekciya",
+"title": "Металлическая коллекция",
+"items": [
+{
+"id": "2",
+"key": "bronzovaya-musorka",
+"name": "Бронзовая Мусорка",
+"img": "/assets/img/cases/bronzovaya-musorka.webp",
+"coin": "199.99",
+"rub": "12 000"
+},
+{
+"id": "85",
+"key": "vzryvnaya-musorka",
+"name": "Взрывная мусорка",
+"img": "/assets/img/cases/vzryvnaya-musorka.webp",
+"coin": "301",
+"rub": "27 100"
+},
+{
+"id": "3",
+"key": "mednaya-musorka",
+"name": "Медная Мусорка",
+"img": "/assets/img/cases/mednaya-musorka.webp",
+"coin": "499.99",
+"rub": "38 888"
+},
+{
+"id": "4",
+"key": "serebryannaya-musorka",
+"name": "Серебрянная Мусорка",
+"img": "/assets/img/cases/serebryannaya-musorka.webp",
+"coin": "699.99",
+"rub": "54 545"
+},
+{
+"id": "5",
+"key": "zolotaya-musorka",
+"name": "Золотая Мусорка",
+"img": "/assets/img/cases/zolotaya-musorka.webp",
+"coin": "999.99",
+"rub": "77 777"
+},
+{
+"id": "6",
+"key": "platinovaya-musorka",
+"name": "Платиновая Мусорка",
+"img": "/assets/img/cases/platinovaya-musorka.webp",
+"coin": "1499.99",
+"rub": "113 311"
+},
+{
+"id": "106",
+"key": "velikaya-musorka",
+"name": "Великая Мусорка",
+"img": "/assets/img/cases/velikaya-musorka.webp",
+"coin": "6200",
+"rub": "500 000"
+}
+]
+},
+{
+"slug": "musornaya-kollekciya",
+"title": "Мусорная коллекция",
+"items": [
+{
+"id": "7",
+"key": "othody",
+"name": "Отходы",
+"img": "/assets/img/cases/othody.webp",
+"coin": "0.75",
+"rub": "59"
+},
+{
+"id": "8",
+"key": "musornyj-paket",
+"name": "Мусорный пакет",
+"img": "/assets/img/cases/musornyj-paket.webp",
+"coin": "1.49",
+"rub": "119"
+},
+{
+"id": "9",
+"key": "svalka",
+"name": "Свалка",
+"img": "/assets/img/cases/svalka.webp",
+"coin": "2.99",
+"rub": "230"
+},
+{
+"id": "10",
+"key": "otbornyj-musor",
+"name": "Отборный Мусор",
+"img": "/assets/img/cases/otbornyj-musor.webp",
+"coin": "5.99",
+"rub": "469"
+},
+{
+"id": "11",
+"key": "carskaya-svalka",
+"name": "Царская Свалка",
+"img": "/assets/img/cases/carskaya-svalka.webp",
+"coin": "15.99",
+"rub": "1 249"
+},
+{
+"id": "12",
+"key": "protuhshij-drop",
+"name": "Протухший Дроп",
+"img": "/assets/img/cases/protuhshij-drop.webp",
+"coin": "24.99",
+"rub": "1 950"
+},
+{
+"id": "13",
+"key": "premium-othody",
+"name": "Премиум Отходы",
+"img": "/assets/img/cases/premium-othody.webp",
+"coin": "49.99",
+"rub": "3 899"
+},
+{
+"id": "14",
+"key": "rublevskaya-pomojka",
+"name": "Рублёвская Помойка",
+"img": "/assets/img/cases/rublevskaya-pomojka.webp",
+"coin": "79.99",
+"rub": "6 199"
+}
+]
+},
+{
+"slug": "vip-color",
+"title": "VIP COLOR",
+"items": [
+{
+"id": "94",
+"key": "beloe",
+"name": "Белое",
+"img": "/assets/img/cases/beloe.webp",
+"coin": "64.99",
+"rub": "4 999"
+},
+{
+"id": "15",
+"key": "krasnoe",
+"name": "Красное",
+"img": "/assets/img/cases/krasnoe.webp",
+"coin": "64.99",
+"rub": "4 999"
+},
+{
+"id": "16",
+"key": "sinee",
+"name": "Синее",
+"img": "/assets/img/cases/sinee.webp",
+"coin": "64.99",
+"rub": "4 999"
+},
+{
+"id": "17",
+"key": "zheltoe",
+"name": "Жёлтое",
+"img": "/assets/img/cases/zheltoe.webp",
+"coin": "64.99",
+"rub": "4 999"
+},
+{
+"id": "18",
+"key": "zelenoe",
+"name": "Зелёное",
+"img": "/assets/img/cases/zelenoe.webp",
+"coin": "64.99",
+"rub": "4 999"
+},
+{
+"id": "19",
+"key": "rgb",
+"name": "RGB",
+"img": "/assets/img/cases/rgb.webp",
+"coin": "149.99",
+"rub": "11 666"
+}
+]
+},
+{
+"slug": "50-50",
+"title": "50/50",
+"items": [
+{
+"id": "42",
+"key": "neonuar",
+"name": "Неонуар",
+"img": "/assets/img/cases/neonuar.webp",
+"coin": "16.99",
+"rub": "1 333"
+},
+{
+"id": "43",
+"key": "redline",
+"name": "Redline",
+"img": "/assets/img/cases/redline.webp",
+"coin": "16.99",
+"rub": "1 333"
+},
+{
+"id": "41",
+"key": "krovavyj-sport",
+"name": "Кровавый спорт",
+"img": "/assets/img/cases/krovavyj-sport.webp",
+"coin": "24.99",
+"rub": "1 999"
+},
+{
+"id": "40",
+"key": "asiimov",
+"name": "Asiimov",
+"img": "/assets/img/cases/asiimov.webp",
+"coin": "39.99",
+"rub": "3 111"
+},
+{
+"id": "45",
+"key": "legendy",
+"name": "Легенды",
+"img": "/assets/img/cases/legendy.webp",
+"coin": "39.99",
+"rub": "3 111"
+},
+{
+"id": "83",
+"key": "potok-informacii",
+"name": "Поток-Информации",
+"img": "/assets/img/cases/potok-informacii.webp",
+"coin": "55",
+"rub": "5 000"
+},
+{
+"id": "81",
+"key": "vzryv",
+"name": "Взрыв",
+"img": "/assets/img/cases/vzryv.webp",
+"coin": "63",
+"rub": "5 611"
+},
+{
+"id": "82",
+"key": "skorostnoj-zver",
+"name": "Скоростной зверь",
+"img": "/assets/img/cases/skorostnoj-zver.webp",
+"coin": "77",
+"rub": "6 977"
+},
+{
+"id": "44",
+"key": "plamya",
+"name": "Пламя",
+"img": "/assets/img/cases/plamya.webp",
+"coin": "349",
+"rub": "26 999"
+}
+]
+},
+{
+"slug": "standartnye-nozhi",
+"title": "Стандартные ножи",
+"items": [
+{
+"id": "75",
+"key": "kerambit",
+"name": "★ Керамбит",
+"img": "/assets/img/cases/kerambit.webp",
+"coin": "1211",
+"rub": "108 999"
+},
+{
+"id": "77",
+"key": "babochka",
+"name": "★ Бабочка",
+"img": "/assets/img/cases/babochka.webp",
+"coin": "1111",
+"rub": "99 999"
+},
+{
+"id": "76",
+"key": "m9-bajonet",
+"name": "★ М9 Байонет",
+"img": "/assets/img/cases/m9-bajonet.webp",
+"coin": "1000",
+"rub": "90 000"
+},
+{
+"id": "78",
+"key": "bajonet",
+"name": "★ Байонет",
+"img": "/assets/img/cases/bajonet.webp",
+"coin": "777",
+"rub": "69 999"
+},
+{
+"id": "80",
+"key": "kogot",
+"name": "★ Коготь",
+"img": "/assets/img/cases/kogot.webp",
+"coin": "555",
+"rub": "50 000"
+},
+{
+"id": "79",
+"key": "stilet",
+"name": "★ Стилет",
+"img": "/assets/img/cases/stilet.webp",
+"coin": "333",
+"rub": "29 999"
+}
+]
+},
+{
+"slug": "musorny-minimum",
+"title": "Мусорный минимум",
+"items": [
+{
+"id": "20",
+"key": "chek-iz-magazina",
+"name": "Чек из магазина",
+"img": "/assets/img/cases/chek-iz-magazina.webp",
+"coin": "0.25",
+"rub": "19"
+},
+{
+"id": "21",
+"key": "paket-s-paketami",
+"name": "Пакет с пакетами",
+"img": "/assets/img/cases/paket-s-paketami.webp",
+"coin": "0.36",
+"rub": "29"
+},
+{
+"id": "22",
+"key": "pustaya-butylka",
+"name": "Пустая бутылка",
+"img": "/assets/img/cases/pustaya-butylka.webp",
+"coin": "0.49",
+"rub": "39"
+},
+{
+"id": "23",
+"key": "myatyj-doshik",
+"name": "Мятый дошик",
+"img": "/assets/img/cases/myatyj-doshik.webp",
+"coin": "0.6",
+"rub": "49"
+},
+{
+"id": "24",
+"key": "rzhavaya-banka",
+"name": "Ржавая банка",
+"img": "/assets/img/cases/rzhavaya-banka.webp",
+"coin": "0.75",
+"rub": "59"
+},
+{
+"id": "25",
+"key": "prosrochennyj-syrok",
+"name": "Просроченный сырок",
+"img": "/assets/img/cases/prosrochennyj-syrok.webp",
+"coin": "0.88",
+"rub": "69"
+},
+{
+"id": "26",
+"key": "korobka-piccy",
+"name": "Коробка пиццы",
+"img": "/assets/img/cases/korobka-piccy.webp",
+"coin": "0.99",
+"rub": "79"
+},
+{
+"id": "27",
+"key": "karman-bomzha",
+"name": "Карман бомжа",
+"img": "/assets/img/cases/karman-bomzha.webp",
+"coin": "1.11",
+"rub": "89"
+},
+{
+"id": "28",
+"key": "paket-u-podezda",
+"name": "Пакет у подъезда",
+"img": "/assets/img/cases/paket-u-podezda.webp",
+"coin": "1.25",
+"rub": "99"
+},
+{
+"id": "29",
+"key": "kontejner-1",
+"name": "Контейнер 1",
+"img": "/assets/img/cases/kontejner-1.webp",
+"coin": "1.5",
+"rub": "119"
+},
+{
+"id": "30",
+"key": "musoroprovod",
+"name": "Мусоропровод",
+"img": "/assets/img/cases/musoroprovod.webp",
+"coin": "1.75",
+"rub": "139"
+},
+{
+"id": "31",
+"key": "nochnoj-meshok",
+"name": "Ночной мешок",
+"img": "/assets/img/cases/nochnoj-meshok.webp",
+"coin": "1.99",
+"rub": "159"
+},
+{
+"id": "32",
+"key": "bak-s-lutom",
+"name": "Бак с лутом",
+"img": "/assets/img/cases/bak-s-lutom.webp",
+"coin": "2.22",
+"rub": "179"
+},
+{
+"id": "33",
+"key": "svalochnyj-rejd",
+"name": "Свалочный рейд",
+"img": "/assets/img/cases/svalochnyj-rejd.webp",
+"coin": "2.5",
+"rub": "199"
+},
+{
+"id": "34",
+"key": "pomojnyj-kush",
+"name": "Помойный куш",
+"img": "/assets/img/cases/pomojnyj-kush.webp",
+"coin": "2.86",
+"rub": "229"
+},
+{
+"id": "35",
+"key": "toksichnye-othody",
+"name": "Токсичные отходы",
+"img": "/assets/img/cases/toksichnye-othody.webp",
+"coin": "3.33",
+"rub": "259"
+},
+{
+"id": "36",
+"key": "musornyj-kapital",
+"name": "Мусорный капитал",
+"img": "/assets/img/cases/musornyj-kapital.webp",
+"coin": "3.73",
+"rub": "299"
+},
+{
+"id": "37",
+"key": "othodnyj-fond",
+"name": "Отходный фонд",
+"img": "/assets/img/cases/othodnyj-fond.webp",
+"coin": "4.35",
+"rub": "349"
+},
+{
+"id": "38",
+"key": "musornyj-magnat",
+"name": "Мусорный магнат",
+"img": "/assets/img/cases/musornyj-magnat.webp",
+"coin": "4.99",
+"rub": "399"
+},
+{
+"id": "39",
+"key": "svalka-bogov",
+"name": "Свалка богов",
+"img": "/assets/img/cases/svalka-bogov.webp",
+"coin": "6.23",
+"rub": "499"
+}
+]
+},
+{
+"slug": "standartnoe-oruzhie",
+"title": "Стандартное Оружие",
+"items": [
+{
+"id": "73",
+"key": "sluchajnyj-nozh",
+"name": "Случайный нож",
+"img": "/assets/img/cases/sluchajnyj-nozh.webp",
+"coin": "127.99",
+"rub": "9 999"
+},
+{
+"id": "74",
+"key": "sluchajnye-perchatki",
+"name": "Случайные перчатки",
+"img": "/assets/img/cases/sluchajnye-perchatki.webp",
+"coin": "114.99",
+"rub": "8 999"
+},
+{
+"id": "58",
+"key": "ak-47",
+"name": "AK-47",
+"img": "/assets/img/cases/ak-47.webp",
+"coin": "2.5",
+"rub": "199"
+},
+{
+"id": "59",
+"key": "galil-ar",
+"name": "Galil AR",
+"img": "/assets/img/cases/galil-ar.webp",
+"coin": "1.5",
+"rub": "119"
+},
+{
+"id": "60",
+"key": "m4a4",
+"name": "M4A4",
+"img": "/assets/img/cases/m4a4.webp",
+"coin": "2.5",
+"rub": "199"
+},
+{
+"id": "61",
+"key": "ssg-08",
+"name": "SSG 08",
+"img": "/assets/img/cases/ssg-08.webp",
+"coin": "3",
+"rub": "230"
+},
+{
+"id": "62",
+"key": "awp",
+"name": "AWP",
+"img": "/assets/img/cases/awp.webp",
+"coin": "3.5",
+"rub": "269"
+},
+{
+"id": "63",
+"key": "famas",
+"name": "FAMAS",
+"img": "/assets/img/cases/famas.webp",
+"coin": "2.7",
+"rub": "199"
+},
+{
+"id": "64",
+"key": "m4a1-s",
+"name": "M4A1-S",
+"img": "/assets/img/cases/m4a1-s.webp",
+"coin": "3",
+"rub": "199"
+},
+{
+"id": "65",
+"key": "mp9",
+"name": "MP9",
+"img": "/assets/img/cases/mp9.webp",
+"coin": "3",
+"rub": "199"
+},
+{
+"id": "66",
+"key": "aug",
+"name": "AUG",
+"img": "/assets/img/cases/aug.webp",
+"coin": "2.5",
+"rub": "199"
+},
+{
+"id": "67",
+"key": "glock-18",
+"name": "Glock-18",
+"img": "/assets/img/cases/glock-18.webp",
+"coin": "3",
+"rub": "199"
+},
+{
+"id": "68",
+"key": "usp-s",
+"name": "USP-S",
+"img": "/assets/img/cases/usp-s.webp",
+"coin": "2.77",
+"rub": "219"
+},
+{
+"id": "69",
+"key": "r8-revolver",
+"name": "R8 Revolver",
+"img": "/assets/img/cases/r8-revolver.webp",
+"coin": "3",
+"rub": "199"
+},
+{
+"id": "70",
+"key": "tec-9",
+"name": "Tec-9",
+"img": "/assets/img/cases/tec-9.webp",
+"coin": "2",
+"rub": "135"
+},
+{
+"id": "71",
+"key": "zeus-x27",
+"name": "Zeus X27",
+"img": "/assets/img/cases/zeus-x27.webp",
+"coin": "2",
+"rub": "135"
+},
+{
+"id": "72",
+"key": "desert-eagle",
+"name": "Desert Eagle",
+"img": "/assets/img/cases/desert-eagle.webp",
+"coin": "3",
+"rub": "210"
+}
+]
+},
+{
+"slug": "stattrak",
+"title": "StatTrak™",
+"items": [
+{
+"id": "87",
+"key": "bednyj-stattrak",
+"name": "Бедный StatTrak",
+"img": "/assets/img/cases/bednyj-stattrak.webp",
+"coin": "15",
+"rub": "1 434"
+},
+{
+"id": "86",
+"key": "srednij-stattrak",
+"name": "Средний StatTrak",
+"img": "/assets/img/cases/srednij-stattrak.webp",
+"coin": "99.67",
+"rub": "9 011"
+},
+{
+"id": "88",
+"key": "dorogoj-stattrak",
+"name": "Дорогой StatTrak",
+"img": "/assets/img/cases/dorogoj-stattrak.webp",
+"coin": "211",
+"rub": "19 222"
+}
+]
+},
+{
+"slug": "keysy-iz-cs2",
+"title": "Кейсы из CS2",
+"items": [
+{
+"id": "46",
+"key": "gidra",
+"name": "Гидра",
+"img": "/assets/img/cases/gidra.webp",
+"coin": "11",
+"rub": "860"
+},
+{
+"id": "47",
+"key": "raskolotaya-set",
+"name": "Расколотая сеть",
+"img": "/assets/img/cases/raskolotaya-set.webp",
+"coin": "5.9",
+"rub": "460"
+},
+{
+"id": "48",
+"key": "revolyuciya",
+"name": "Революция",
+"img": "/assets/img/cases/revolyuciya.webp",
+"coin": "4.79",
+"rub": "370"
+},
+{
+"id": "49",
+"key": "zapretnaya-zona",
+"name": "Запретная зона",
+"img": "/assets/img/cases/zapretnaya-zona.webp",
+"coin": "4.79",
+"rub": "370"
+},
+{
+"id": "50",
+"key": "spectrum",
+"name": "Spectrum",
+"img": "/assets/img/cases/spectrum.webp",
+"coin": "3.6",
+"rub": "280"
+},
+{
+"id": "51",
+"key": "cs20",
+"name": "CS20",
+"img": "/assets/img/cases/cs20.webp",
+"coin": "4.79",
+"rub": "370"
+},
+{
+"id": "52",
+"key": "kilowatt",
+"name": "Kilowatt",
+"img": "/assets/img/cases/kilowatt.webp",
+"coin": "4.99",
+"rub": "389"
+},
+{
+"id": "53",
+"key": "dreams-and-nightmares",
+"name": "Dreams & Nightmares",
+"img": "/assets/img/cases/dreams-and-nightmares.webp",
+"coin": "4.99",
+"rub": "389"
+},
+{
+"id": "54",
+"key": "fever",
+"name": "Fever",
+"img": "/assets/img/cases/fever.webp",
+"coin": "4.99",
+"rub": "389"
+},
+{
+"id": "55",
+"key": "gallery",
+"name": "Gallery",
+"img": "/assets/img/cases/gallery.webp",
+"coin": "4.99",
+"rub": "389"
+},
+{
+"id": "56",
+"key": "operation-riptide",
+"name": "Operation Riptide",
+"img": "/assets/img/cases/operation-riptide.webp",
+"coin": "4.99",
+"rub": "389"
+},
+{
+"id": "57",
+"key": "operation-broken-fang",
+"name": "Operation Broken Fang",
+"img": "/assets/img/cases/operation-broken-fang.webp",
+"coin": "4.99",
+"rub": "389"
+}
+]
+}
+]
