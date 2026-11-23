@@ -587,3 +587,38 @@ a:hover .cart__skin,.case:hover .cart__skin{transform:rotate(-4deg) translateY(-
 .hdr__nav a{white-space:nowrap}
 .mode__t{font-size:min(calc(100cqw / 7.8),38px)}
 .marq__track{line-height:1.3}
+
+/* ---- QA-исправления ---- */
+/* Шапка: в Firefox и на 1024–1366 меню не помещалось */
+@media (max-width:1366px){.hdr__login span{display:none}.hdr__login{padding:0 12px}.hdr__nav a{padding:10px 7px}}
+@media (max-width:1240px){.hdr__nav,.hdr__cta,.hdr__login{display:none}.burger{display:inline-flex}}
+.hdr__in{min-width:0}.logo{min-width:0}
+/* Сетки не раздвигают страницу */
+.cases>*,.items>*,.modes>*,.adv>*,.feats>*,.gds>*{min-width:0}
+.case .cart,.item__img{max-width:100%}
+.h2,.ptitle,.fin__t span,.mode__t{overflow-wrap:break-word;hyphens:manual}
+/* Узкие телефоны (320–374 px) */
+@media (max-width:374px){
+  .age--hdr{display:none}
+  .hdr__in{gap:10px}
+  .logo__w{font-size:15px;gap:4px}
+  .mk{width:26px;height:26px}
+  .h2{font-size:25px}
+  .ptitle{font-size:29px}
+  .mega{font-size:36px}
+  .fin__t{font-size:46px}
+  .mode{padding:12px}
+  .mode__top span:first-child{display:none}
+  .cases,.items{gap:8px}
+  .case{padding:12px 8px 14px}
+  .case__p{font-size:16px}
+  .case__n{font-size:11px}
+  .specs{padding:4px 14px;font-size:12.5px}
+  .btn--xl{font-size:14px;padding:0 18px}
+  .dock .btn{font-size:13px}
+}
+/* Удобные для пальца ссылки в крошках и футере */
+.crumbs a,.crumbs span{display:inline-block;padding:8px 0}
+.ftr__col a,.ftr__ct a{padding:5px 0}
+/* Витрина не меняет высоту при подгрузке шрифта */
+.tick{min-height:92px}

@@ -108,7 +108,8 @@
         try { document.execCommand('copy'); } catch (e) {}
         ta.remove(); done();
       };
-      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(code).then(done, fallback); else fallback();
+      var settled = false, ok = function () { if (!settled) { settled = true; done(); } }, alt = function () { if (!settled) { settled = true; fallback(); } };
+      if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(code).then(ok, alt); setTimeout(alt, 700); } else alt();
     });
   });
 
