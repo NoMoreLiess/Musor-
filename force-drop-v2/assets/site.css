@@ -114,7 +114,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .cart{--c:var(--or);position:relative;width:100%;max-width:260px;margin:0 auto;aspect-ratio:4/3.4}
 .cart__box{position:absolute;left:0;right:0;bottom:0;width:100%;height:auto;filter:drop-shadow(0 18px 30px color-mix(in srgb,var(--c) 35%,transparent))}
 .cart__skin{position:absolute;left:12%;top:2%;width:76%;height:auto;transform:rotate(-10deg);filter:drop-shadow(0 10px 16px rgba(0,0,0,.65)) drop-shadow(0 0 22px color-mix(in srgb,var(--c) 55%,transparent));transition:transform .5s var(--ease)}
-.cart--img{aspect-ratio:1}
+.cart--img{aspect-ratio:512/396;max-width:300px}
 .cart__real{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 18px 30px color-mix(in srgb,var(--c) 30%,transparent))}
 a:hover .cart__skin,.case:hover .cart__skin{transform:rotate(-4deg) translateY(-8px) scale(1.04)}
 .cart--sm{max-width:200px}
