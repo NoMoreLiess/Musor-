@@ -113,40 +113,4 @@
     });
   });
 
-  // Форма обратной связи: проверка полей, ловушка для ботов, отправка без перезагрузки
-  $$('[data-form]').forEach(function (form) {
-    var started = Date.now();
-    var ts = form.querySelector('[name=ts]'); if (ts) ts.value = String(started);
-    var st = form.querySelector('.frm__st'), btn = form.querySelector('[type=submit]');
-    var say = function (t, cls) { st.textContent = t; st.className = 'frm__st ' + (cls || ''); };
-    var check = function (el) {
-      var box = el.closest('.fld, .chk'); if (!box) return true;
-      var ok = el.type === 'checkbox' ? el.checked : el.checkValidity() && el.value.trim().length >= (el.minLength > 0 ? el.minLength : 1);
-      box.classList.toggle('is-err', !ok); return ok;
-    };
-    $$('input, select, textarea', form).forEach(function (el) {
-      if (el.name === 'website' || el.type === 'hidden') return;
-      el.addEventListener('blur', function () { if (el.value || el.type === 'checkbox') check(el); });
-      el.addEventListener('input', function () { if (el.closest('.is-err')) check(el); });
-      el.addEventListener('change', function () { check(el); });
-    });
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var fields = $$('[required]', form), ok = true, first = null;
-      fields.forEach(function (el) { if (!check(el)) { ok = false; first = first || el; } });
-      if (!ok) { say('Проверьте отмеченные поля.', 'err'); first.focus(); return; }
-      if (form.website.value) { say('Сообщение отправлено.', 'ok'); form.reset(); return; } // бот — молча отбрасываем
-      if (Date.now() - started < 3000) { say('Слишком быстро — проверьте сообщение и отправьте ещё раз.', 'err'); return; }
-      btn.disabled = true; say('Отправляем…');
-      fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
-        .then(function (r) { return r.json().catch(function () { return { ok: false }; }).then(function (j) { return { status: r.status, j: j }; }); })
-        .then(function (res) {
-          if (res.status === 200 && res.j.ok) { say('Спасибо! Сообщение отправлено — ответим на указанный email.', 'ok'); form.reset(); started = Date.now(); if (ts) ts.value = String(started); }
-          else if (res.status === 429) say('Слишком много сообщений подряд. Попробуйте через несколько минут.', 'err');
-          else say(res.j.error || 'Не удалось отправить. Попробуйте позже или напишите в поддержку сервиса.', 'err');
-        })
-        .catch(function () { say('Нет связи с сервером. Проверьте интернет и попробуйте ещё раз.', 'err'); })
-        .then(function () { btn.disabled = false; });
-    });
-  });
 })();
